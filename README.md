@@ -1,3 +1,32 @@
+# 🎲 Foundry Smart Contract Lottery
+
+This is a decentralized lottery (raffle) smart contract built using [Foundry](https://book.getfoundry.sh/) — a blazing-fast, portable, and modular toolkit for Ethereum application development written in Rust.
+
+Participants can enter the lottery by paying a set entrance fee, and at regular intervals, a random winner is selected using Chainlink VRF (Verifiable Random Function).
+
+---
+
+## 📦 Features
+
+- ✅ Smart contract lottery using Solidity
+- 🎰 Random winner selection with Chainlink VRF
+- ⏰ Automated time-based execution using Chainlink Keepers
+- 🧪 Unit and integration tests with Foundry
+- 📄 Clean and well-structured contract design
+- 🚀 Easily deployable to testnets and mainnet
+
+---
+
+## 🧱 Stack
+
+- **Solidity** – Smart contract language
+- **Foundry** – Development & testing framework
+- **Chainlink VRF** – Randomness provider
+- **Chainlink Keepers** – Automation
+- **Ethers.js** (optional for frontend interaction)
+
+---
+
 # Getting Started
 
 ## Requirements
@@ -161,8 +190,8 @@ So, then you have two options:
 
 # Thank you!
 
-If you appreciated this, feel free to follow me or donate!
+If you appreciated this, feel free to follow me!
 
-ETH/Arbitrum/Optimism/Polygon/etc Address: 0x9680201d9c93d65a3603d2088d125e955c73BD65
 
-[![Patrick Collins Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/feranmiakinjeji)
+
+[![Akinjeji Oluwaferanmi Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/feranmiakinjeji)
