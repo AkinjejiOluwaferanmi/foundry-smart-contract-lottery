@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import {Script} from "forge-std/Script.sol";
+import {Script} from "lib/forge-std/src/Script.sol";
 import {LinkToken} from "test/mocks/LinkToken.sol";
 import {VRFCoordinatorV2PlusMock} from "@chainlink/contracts/src/v0.8/vrf/mocks/VRFCoordinatorV2PlusMock.sol";
 
@@ -54,23 +54,18 @@ contract HelperConfig is CodeConstants, Script {
         return getConfigByChainId(block.chainid);
     }
 
-    function getSepoliaEthConfig()
-    public
-    view
-    returns (NetworkConfig memory)
-{
-    return NetworkConfig({
-        entranceFee: 0.01 ether,
-        interval: 30, // 30 seconds
-        vrfCoordinator: 0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B,
-        gasLane: 0x787d74caea10b2b357790d5b5247c2f63d1d91572a9846f780606e4d953677ae,
-        subscriptionId: 69142893453596320509662208124095210710206148356425329733498677318421351896349, // Your own subscriptionId goes here
-        callbackGasLimit: 500000, // 500,000 gas
-        link: 0x779877A7B0D9E8603169DdbD7836e478b4624789,
-        deployerKey: vm.envUint("SEPOLIA_PRIVATE_KEY")
-    });
-
-}
+    function getSepoliaEthConfig() public view returns (NetworkConfig memory) {
+        return NetworkConfig({
+            entranceFee: 0.01 ether,
+            interval: 30, // 30 seconds
+            vrfCoordinator: 0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B,
+            gasLane: 0x787d74caea10b2b357790d5b5247c2f63d1d91572a9846f780606e4d953677ae,
+            subscriptionId: 69142893453596320509662208124095210710206148356425329733498677318421351896349, // Your own subscriptionId goes here
+            callbackGasLimit: 500000, // 500,000 gas
+            link: 0x779877A7B0D9E8603169DdbD7836e478b4624789,
+            deployerKey: vm.envUint("SEPOLIA_PRIVATE_KEY")
+        });
+    }
 
     function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory) {
         if (localNetworkConfig.vrfCoordinator != address(0)) {

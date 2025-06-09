@@ -12,5 +12,3 @@ docs/
 
 # Dotenv file
 .env
-
-test/integration/Interactions.t.sol
