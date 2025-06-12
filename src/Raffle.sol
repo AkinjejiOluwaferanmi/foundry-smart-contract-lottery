@@ -10,7 +10,7 @@ import {AutomationCompatibleInterface} from
 
 /**
  * @title Raffle
- * @author EngrPips
+ * @author Akinjeji Oluwaferanmi
  * @notice This contract if Participating in a Raffle and standing the chance to win.
  * @dev This contract heavily implements the chainlink VRF and Automation
  */
